@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/gradient"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <View
+            android:background="@drawable/gradient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="sdfsbdhjfbhjebhwjehrbwef ajfdbhjbshjbwef ansd fsfjbjhwrbejhrbda snc ansdbjqbwjhdjqwnd mamndw qjhwbdhjqbfhjbn adsqjwbdqhbehqjjwsnqwfgiueqfhda" />
+
+        <TextView
+            android:id="@+id/source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="32dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/description"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Source" />
+
+        <TextView
+            android:id="@+id/created_At"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Create at" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/source"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
