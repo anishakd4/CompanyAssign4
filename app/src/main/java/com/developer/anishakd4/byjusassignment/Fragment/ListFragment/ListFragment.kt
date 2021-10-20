@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.developer.anishakd4.byjusassignment.Adapter.RecyclerViewAdapter
@@ -43,7 +44,7 @@ class ListFragment : Fragment(), RecyclerViewAdapter.ClickInterFace {
         val dataSource = NewsDatabase.getInstance(context!!.applicationContext).newsDao
         val viewModelFactory = ListFragmentViewModelFactory(dataSource)
 
-        viewModel = ViewModelProviders.of(this, viewModelFactory).get(ListFragmentViewModel::class.java)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(ListFragmentViewModel::class.java)
 
         viewModel.fetchNews()
 
